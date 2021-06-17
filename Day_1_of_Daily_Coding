@@ -1,0 +1,153 @@
+--------ARRAY SUM IN PYTHON-----------------
+
+import math
+
+
+def array_sum(arr1):
+
+    sum_value=0
+    for i in arr1:
+        
+        sum_value+=i
+
+    return sum_value
+
+if __name__ == "__main__":
+
+    arr=[]
+    
+    n=int(input("Enter the total count"))
+
+    print("Enter the input values")
+
+    for i in range(n):
+
+        val=int(input())
+
+        arr.append(val)
+
+    print(array_sum(arr))
+    
+    
+    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Alice and Bob each created one problem for HackerRank. A reviewer rates the two challenges, awarding points on a scale from 1 to 100 for three categories: 
+problem clarity, originality, and difficulty.
+
+The rating for Alice's challenge is the triplet a = (a[0], a[1], a[2]), and the rating for Bob's challenge is the triplet b = (b[0], b[1], b[2]).
+
+The task is to find their comparison points by comparing a[0] with b[0], a[1] with b[1], and a[2] with b[2].
+
+If a[i] > b[i], then Alice is awarded 1 point.
+If a[i] < b[i], then Bob is awarded 1 point.
+If a[i] = b[i], then neither person receives a point.
+Comparison points is the total points a person earned.
+
+Given a and b, determine their respective comparison points.
+
+
+------------------------------------------------------------------------------------------
+
+METHOD 1:
+
+import math
+
+
+def compare(arr1,arr2):
+
+    score=[0,0]
+    
+    for i in range(3):
+
+        if arr1[i]>arr2[i]:
+            score[0]+=1
+        else:
+            score[1]+=1
+        
+    return score
+
+
+if __name__ == "__main__":
+
+    alice_arr=[]
+
+    bob_arr=[]
+    
+    n= 3
+
+    print("Enter the input values")
+
+    for i in range(n):
+
+        val=int(input())
+
+        alice_arr.append(val)
+
+    for i in range(n):
+
+        new_val=int(input())
+
+        bob_arr.append(new_val)
+
+    print(compare(alice_arr,bob_arr))
+    
+    
+------------------------------------------------------------    
+    
+METHOD 2:
+
+
+import math
+
+
+def compare(a1,a2,a3,b1,b2,b3):
+
+    alice_score=0
+    bob_score=0
+
+    alice_arr=[a1,a2,a3]
+    bob_arr=[b1,b2,b3]
+    
+    for i in range(3):
+
+        if alice_arr[i]>bob_arr[i]:
+            alice_score+=1
+        else:
+            bob_score+=1
+        
+    return (alice_score,bob_score)
+
+
+if __name__ == "__main__":
+
+    
+    n= 6
+
+    print("Enter the input values")
+
+
+
+    val1=int(input())
+    val2=int(input())
+    val3=int(input())
+    val4=int(input())
+    val5=int(input())
+    val6=int(input())
+
+       
+    print(compare(val1,val2,val3,val4,val5,val6))
+        
+        
+    
+
+        
+        
+    
+-----------------------------------------------------------------------------------------
+
+
+        
+        
+    
