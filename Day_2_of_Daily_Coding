@@ -1,0 +1,74 @@
+Find unique string in python:
+
+thisset = {"apple", "banana", "cherry","appLe"}
+s=sorted(thisset)   
+print(s)
+print(len(s))
+
+for i in range(len(s)):
+    s[i]=s[i].lower()
+
+print(s)
+stri=sorted(s)
+print(stri)
+print(len(stri))
+
+st=sorted(set(stri))
+#st=sorted(st)
+print(st)
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+Find Unique Characters in a string:
+
+string=input("Enter the string: ")
+
+liststr=[]
+arr=[]
+arr=string
+
+for i in arr:
+    if i not in liststr:
+        liststr.append(i)
+
+print(liststr)
+
+-----------------------------------------------------------------------------------
+
+URLIfy - Fill spaces with %20
+
+
+stri=input("Enter the string: ")
+stri=stri.strip()
+print(stri)
+
+stri=stri.replace(' ',"%20")
+print(stri)
+
+
+
+Trial and Error Approach 2.
+
+
+
+stri=input("Enter the string: ")
+print(stri.split())
+
+#split returns a list
+s="%20".join(stri.split())
+print(s)
+
+stri=stri.strip()
+print(stri)
+
+
+
+stri=stri.replace(' ',"%20")
+print(stri)
+
+
+
+------------------------------------------------------------------------------------
+
